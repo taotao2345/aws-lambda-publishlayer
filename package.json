@@ -1,0 +1,45 @@
+{
+  "name": "aws-lambda-publishlayer",
+  "version": "1.0.0",
+  "description": "AWS Lambda Layer Publish",
+  "main": "dist/index.js",
+  "scripts": {
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "lint": "tslint src/**/*.ts --fix",
+    "prettier": "prettier src/**/*.ts --write",
+    "format": "yarn prettier && yarn lint",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taotao2345/aws-lambda-publishlayer.git"
+  },
+  "keywords": [
+    "actions",
+    "aws",
+    "lambda"
+  ],
+  "author": "taotao2345",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "aws-sdk": "^2.566.0"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.6",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "aws-sdk-mock": "^4.5.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}

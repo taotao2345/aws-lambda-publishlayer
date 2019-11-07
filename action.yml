@@ -1,0 +1,16 @@
+name: 'AWS Lambda Layer Publish'
+description: 'Run PublishLayerVersion'
+author: 'taotao2345'
+inputs: 
+  layer_name:
+    description: 'Target layer name'
+    required: true
+  zip_file:
+    description: 'Package zip file path'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'tag'
+  color: 'gray-dark'
