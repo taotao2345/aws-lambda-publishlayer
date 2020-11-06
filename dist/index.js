@@ -59,13 +59,22 @@ var lambda_1 = __importDefault(__webpack_require__(3321));
 var fs_1 = __importDefault(__webpack_require__(5747));
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var LayerName, zipFile, lambdaConfig, lambda, response, error_1;
+        var LayerName, zipFile, Description, CompatibleRuntimes, lambdaConfig, lambda, response, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     LayerName = core.getInput('layer_name', { required: true });
                     zipFile = core.getInput('zip_file', { required: true });
+                    Description = '';
+                    // Check if description was provided or not
+                    if (core.getInput('description', { required: false }) !== '') {
+                        Description = core.getInput('description', { required: false });
+                    }
+                    CompatibleRuntimes = [];
+                    if (core.getInput('compatible_runtimes', { required: false }) !== '') {
+                        CompatibleRuntimes = JSON.parse(core.getInput('compatible_runtimes', { required: false }));
+                    }
                     lambdaConfig = {
                         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
                         apiVersion: '2015-03-31',
@@ -82,6 +91,8 @@ function run() {
                                 ZipFile: fs_1.default.readFileSync(zipFile),
                             },
                             LayerName: LayerName,
+                            CompatibleRuntimes: CompatibleRuntimes,
+                            Description: Description
                         })
                             .promise()];
                 case 1:
