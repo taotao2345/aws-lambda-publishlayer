@@ -23,6 +23,6 @@ Add Secret before this action. `Settings > Secrets > Add a new secret`
   with:
     layer_name: TargetFunctionName
     zip_file: path/to/file.zip
-    description: verbose description of the layer
-    compatible_runtimes: An array of compatible runtimes, pass as a string, remember to stringify the array before including it here.
+    description: verbose description of the layer, not required
+    compatible_runtimes: An array of compatible runtimes, pass as a string, remember to stringify the array before including it here, not required
 ```
