@@ -8,7 +8,8 @@
     "lint": "tslint src/**/*.ts --fix",
     "prettier": "prettier src/**/*.ts --write",
     "format": "yarn prettier && yarn lint",
-    "build": "tsc -p ."
+    "prebuild": "tsc -p .",
+    "build": "ncc build"
   },
   "repository": {
     "type": "git",
