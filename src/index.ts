@@ -6,6 +6,15 @@ async function run() {
     try {
         const LayerName = core.getInput('layer_name', { required: true })
         const zipFile = core.getInput('zip_file', { required: true })
+        let Description = '';
+        // Check if description was provided or not
+        if(core.getInput('description', { required: false }) !== '') {
+            Description = core.getInput('description', { required: false })
+        }
+        let CompatibleRuntimes = []
+        if(core.getInput('compatible_runtimes', { required: false }) !== '') {
+            CompatibleRuntimes = JSON.parse(core.getInput('compatible_runtimes', { required: false }));
+        }
 
         const lambdaConfig: Lambda.Types.ClientConfiguration = {
             accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -26,6 +35,8 @@ async function run() {
                     ZipFile: fs.readFileSync(zipFile),
                 },
                 LayerName,
+                CompatibleRuntimes,
+                Description
             })
             .promise()
 
