@@ -8,6 +8,12 @@ inputs:
   zip_file:
     description: 'Package zip file path'
     required: true
+  compatible_runtimes:
+    description: 'An array of compatible runtimes if any. Remember to stringify the array.'
+    required: false
+  description:
+    description: 'A verbose description if any.'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
