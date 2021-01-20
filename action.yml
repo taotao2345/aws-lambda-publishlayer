@@ -1,6 +1,6 @@
-name: 'AWS Lambda Layer Publish'
+name: 'AWS Lambda Layer Publish with compatible runtime'
 description: 'Run PublishLayerVersion'
-author: 'taotao2345'
+author: 'KillDozerX2'
 inputs: 
   layer_name:
     description: 'Target layer name'
