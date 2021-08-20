@@ -40,6 +40,7 @@ async function run() {
             })
             .promise()
 
+        core.setOutput('LayerVersionArn', response.LayerVersionArn);
         core.info(`Publish Success : ${response.LayerVersionArn}`)
     } catch (error) {
         core.setFailed(error)
