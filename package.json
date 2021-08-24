@@ -7,9 +7,10 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "lint": "tslint src/**/*.ts --fix",
     "prettier": "prettier src/**/*.ts --write",
-    "format": "yarn prettier && yarn lint",
+    "format": "npm run prettier && npm run lint",
     "prebuild": "tsc -p .",
-    "build": "ncc build"
+    "build": "ncc build",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
