@@ -12,7 +12,7 @@
   "dependencies": {
     "@jest/types": "^24.9.0",
     "jest-regex-util": "^24.3.0",
-    "jest-snapshot": "^24.9.0"
+    "jest-snapshot": "^25.0.0"
   },
   "devDependencies": {
     "jest-haste-map": "^24.9.0",
