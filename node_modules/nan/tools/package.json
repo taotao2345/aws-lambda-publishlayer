@@ -12,7 +12,7 @@
     "Mathias Küsel (https://github.com/mathiask88/)"
   ],
   "dependencies": {
-    "glob": "~5.0.10",
+    "glob": "~9.0.0",
     "commander": "~2.8.1"
   },
   "license": "MIT"
