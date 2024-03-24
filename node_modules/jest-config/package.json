@@ -19,7 +19,7 @@
     "jest-environment-jsdom": "^24.9.0",
     "jest-environment-node": "^24.9.0",
     "jest-get-type": "^24.9.0",
-    "jest-jasmine2": "^24.9.0",
+    "jest-jasmine2": "^27.0.0",
     "jest-regex-util": "^24.3.0",
     "jest-resolve": "^24.9.0",
     "jest-util": "^24.9.0",
